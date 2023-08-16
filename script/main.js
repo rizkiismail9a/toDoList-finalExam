@@ -89,6 +89,7 @@ const clearForm = () => {
   document.getElementById("inputDate").value = "";
   document.getElementById("inputTime").value = "";
   document.getElementById("inputTodo").value = "";
+  document.getElementById("option1").checked = true;
 };
 const createTask = (e) => {
   e.preventDefault();
@@ -142,6 +143,7 @@ const searchTask = () => {
 };
 
 const editTask = (e, index) => {
+  e.preventDefault();
   document.getElementById("inputDate").value = document.querySelectorAll("h6")[index].textContent;
   document.getElementById("inputTime").value = document.querySelectorAll("p")[index].textContent;
   document.getElementById("inputTodo").value = document.querySelectorAll("h5")[index].textContent;
